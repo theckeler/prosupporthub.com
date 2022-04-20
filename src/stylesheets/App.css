@@ -1,0 +1,368 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  max-width: 87.5em;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  background: #febd17;
+  color: #000;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.75em 2.5em;
+  text-decoration: none;
+  text-align: center;
+}
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.bg-yellow {
+  background: #febd17;
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
+
+.bg-grey {
+  background: #edeeef;
+}
+
+.bg-white {
+  background: #fff;
+}
+.bg-white .btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.columns {
+  display: flex;
+}
+.columns.grid {
+  display: grid;
+}
+.columns.grid.columns-2 {
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5em;
+}
+.columns.grid.columns-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.5em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.375rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0.625em;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.questions * {
+  transition: all 0.3s ease-in-out;
+}
+.questions .question {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  padding: 0 1.25em 0 0;
+}
+.questions .question:after {
+  content: "+";
+  font-size: 1.75em;
+  font-weight: 300;
+  margin-left: auto;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 0.6;
+}
+.questions .question.active:after {
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+.questions .answer {
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+.questions .answer.active {
+  max-height: 31.25em;
+}
+
+.hero,
+.section-6 {
+  position: relative;
+  overflow: hidden;
+  min-height: 26.25em;
+}
+.hero .wrapper,
+.section-6 .wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 26.25em;
+}
+.hero .overlay,
+.section-6 .overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 1.25em 1.875em;
+  color: #fff;
+  max-width: 50em;
+}
+.hero .overlay h1,
+.section-6 .overlay h1 {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+.hero img,
+.section-6 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header {
+  padding: 2.5em 1.25em;
+}
+header .wrapper {
+  justify-content: space-between;
+}
+header svg {
+  max-width: 31.25em;
+}
+
+section {
+  padding: 2.5em 1.25em;
+}
+
+.section-2 .columns .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-2 .columns .column svg {
+  max-width: 12.5em;
+}
+.section-2 .columns .column p,
+.section-2 .columns .column h2 {
+  text-align: center;
+}
+.section-2 .columns .column h2 {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.section-3 .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-3 .wrapper h2 {
+  color: #febd17;
+}
+
+.section-4 .apps.columns.grid.columns-2 {
+  display: flex;
+  gap: 0.625em;
+}
+.section-4 .apps.columns.grid.columns-2 img {
+  max-width: 12.5em;
+}
+
+.section-5 .copy,
+.section-6 .copy {
+  padding: 0.75em 2.5em;
+}
+.section-5 .columns,
+.section-6 .columns {
+  margin-bottom: 2.5em;
+}
+.section-5 .columns:last-of-type,
+.section-6 .columns:last-of-type {
+  margin-bottom: 0;
+}
+.section-5 .columns .column,
+.section-6 .columns .column {
+  flex-basis: 100%;
+}
+.section-5 .columns .column.copy,
+.section-6 .columns .column.copy {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-6 .wrapper {
+  justify-content: flex-end;
+}
+.section-6 .wrapper .overlay {
+  max-width: 25em;
+  min-height: 18.75em;
+}
+
+.section-7 .wrapper {
+  max-width: 50em;
+}
+.section-7 .wrapper h3 {
+  text-align: center;
+  margin-bottom: 1.25em;
+}
+
+footer {
+  background: #000;
+}
+footer .tough {
+  padding: 1.25em;
+}
+footer .tough .wrapper {
+  display: flex;
+  justify-content: center;
+}
+footer .tough .wrapper svg {
+  max-width: 25em;
+}
+footer .copyright,
+footer a,
+footer p {
+  font-size: 0.75rem;
+  line-height: 2;
+  color: #fff;
+}
+footer p {
+  margin-top: 1.25em;
+}
+footer .copyright {
+  padding: 3.125em 1.25em;
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  overflow-y: scroll;
+  justify-content: center;
+  cursor: pointer;
+}
+.modal.active {
+  display: flex;
+}
+.modal .modal-wrapper {
+  width: 100%;
+  max-width: 50em;
+  max-height: 90vh;
+  position: relative;
+}
+.modal .modal-wrapper .close {
+  position: absolute;
+  right: 1.25em;
+  top: 1.25em;
+  background: #febd17;
+  padding: 1.25em;
+  border-radius: 0.1875em;
+}
+.modal .modal-wrapper .modal-content {
+  width: 100%;
+  padding: 3.125em 1.25em;
+  background: #fff;
+}
