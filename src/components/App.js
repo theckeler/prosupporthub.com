@@ -569,7 +569,7 @@ function App() {
           >
             ✕
           </div>
-          <div className="modal-content" id="modal-content">
+          <div className="modal-content">
             <h1>Terms of use</h1>
             <sub>Effective 12/1/2020</sub>
 
@@ -1156,7 +1156,7 @@ function App() {
           >
             ✕
           </div>
-          <div className="modal-content" id="modal-content">
+          <div className="modal-content">
             <h1>
               DeWalt<sup>®</sup> Pro Support Hub Privacy Policy
             </h1>
@@ -1821,7 +1821,7 @@ function App() {
           >
             ✕
           </div>
-          <div className="modal-content" id="modal-content">
+          <div className="modal-content">
             <h1>Text Message Terms and Conditions</h1>
 
             <p>
