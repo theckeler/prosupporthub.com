@@ -28,7 +28,7 @@ function App() {
         </div>
       </header>
 
-      <main>
+      <main className="dewaltprosupporthub">
         <section className="hero section-1">
           <div className="wrapper">
             <div className="overlay">
