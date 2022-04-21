@@ -215,12 +215,13 @@ img {
 }
 
 header {
-  padding: 2.5em 1.25em;
+  padding: 1.25em 0;
 }
 header .wrapper {
   justify-content: space-between;
 }
 header svg {
+  padding: 1.25em;
   max-width: 31.25em;
 }
 
@@ -365,4 +366,34 @@ footer .copyright {
   width: 100%;
   padding: 3.125em 1.25em;
   background: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero,
+.section-6 {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .hero img,
+.section-6 img {
+    position: relative;
+  }
+  .hero .wrapper,
+.section-6 .wrapper {
+    min-width: auto;
+    min-height: auto;
+    align-items: flex-start;
+    background: #000;
+    margin: 0;
+  }
+  .hero .wrapper .overlay,
+.section-6 .wrapper .overlay {
+    max-width: 100%;
+  }
+
+  .columns.grid.columns-3,
+.columns.grid.columns-2 {
+    grid-template-columns: 1fr;
+  }
 }
